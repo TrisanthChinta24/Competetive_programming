@@ -1,6 +1,7 @@
 import java.io.*;
 import java.util.*;
 
+
 public class BuildingTeams {
     private static int[] visited;
     public static void main(String[] args) throws IOException {
@@ -97,3 +98,38 @@ public class BuildingTeams {
             }
         }
 }
+// This is a Bipartite Graph problem.
+
+// Goal:
+// Assign every node to one of 2 teams such that
+// adjacent nodes are always in opposite teams.
+
+// visited[i]:
+// 0 -> unvisited
+// 1 -> Team 1
+// 2 -> Team 2
+
+// BFS IDEA:
+// - Start any unvisited node with Team 1.
+// - Its neighbors must be Team 2.
+// - Their neighbors must be Team 1.
+// - Continue alternately.
+
+// Opposite team:
+// 3 - visited[curr]
+
+// because:
+// 3 - 1 = 2
+// 3 - 2 = 1
+
+// If two adjacent nodes ever get same team:
+// visited[neighbor] == visited[curr]
+
+// => Graph is NOT bipartite
+// => IMPOSSIBLE
+
+// Run BFS from every node because
+// graph may be disconnected.
+// 
+// Time Complexity:
+// O(N + M)
