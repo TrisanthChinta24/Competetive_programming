@@ -5,7 +5,7 @@ import java.util.*;
 //in this problem I need to find the highscore that I can obtain on the way from 1 to n.
 //bellman ford is used to find the min distance from source to other nodes while detecting the negative cycles
 //I am using this algorithm in the sense of negating the scores to obtain the min dist and then revesign the sign which results in max score obtained.
-//if there is a -ve cycle (involving the end) which means scores keep on increasing infinitely then output is -1.
+//if there is a -ve cycle (involving the end) which means scores keep on increasing infinitely then output is -F1.
 public class HighScore {
 
     static class Edge {
