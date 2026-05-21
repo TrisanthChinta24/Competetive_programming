@@ -1,6 +1,9 @@
 import java.io.*;
 import java.util.*;
 
+//this graph has two layer 1st layer is min distance to reach a particular node without using coupon
+//another is min dist to reach a particular node using the coupon. the layer is shifted while the route(edge) is using coupon.
+//once the layer is went down we cannot retrieve back to top layer.
 public class FlightDiscount {
 
     static class Edge {
